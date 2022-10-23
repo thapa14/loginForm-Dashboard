@@ -1,7 +1,7 @@
 import React, { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Paper, Typography } from "@mui/material";
-import { LoggedUserContext } from "../App";
+import { LoggedUserContext, SetLoggedUserContext } from "../App";
 import { Button, Input } from "../Components/inputContainer";
 import { LoginNavbar } from "../Components/layoutContainer";
 
@@ -14,6 +14,7 @@ function ResetPassword() {
   // states
   const history = useNavigate();
   const loggedUser = useContext(LoggedUserContext);
+  const SetLoggedUser = useContext(SetLoggedUserContext);
   const [userData, setUserData] = useState(initialValue);
   const [error, setError] = useState({});
 
@@ -45,6 +46,7 @@ function ResetPassword() {
 
       userList[loggedUserIndex].password = userData.newPassword;
       window.localStorage.setItem("userList", JSON.stringify(userList));
+      SetLoggedUser(userList[loggedUserIndex]);
     } else {
       setUserData(initialValue);
       alert("wrong password");
