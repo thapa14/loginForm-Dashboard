@@ -85,7 +85,7 @@ function ResponsiveDrawer(props) {
               variant="h6"
               sx={{ textTransform: "capitalize", fontSize: "1rem" }}
             >
-              {loggedUser.fullName}
+              {loggedUser.userName}
             </Typography>
             <Profile />
           </div>

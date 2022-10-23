@@ -20,8 +20,10 @@ function RegistrationPage({ message }) {
   // form validation
   const validate = () => {
     let temp = {};
-    temp.userName = userData.fullName ? "" : "This field can't be empty";
+    temp.userName = userData.userName ? "" : "This field can't be empty";
     temp.email = /.+@..+/.test(userData.email) ? "" : "Invalid Email";
+    temp.checkbox =
+      userData.checkbox === true ? "" : "Please accept conditions";
     temp.password = userData.password.length > 2 ? "" : "Password is too short";
     temp.confirmPassword =
       userData.password === userData.confirmPassword
@@ -34,7 +36,7 @@ function RegistrationPage({ message }) {
   // form submition function
   const signUp = (e) => {
     const userDataToAdd = {
-      fullName: userData.fullName,
+      userName: userData.userName,
       email: userData.email,
       password: userData.password,
       checkbox: userData.checkbox,
@@ -110,7 +112,7 @@ function RegistrationPage({ message }) {
         <Input
           id="confirm-password"
           type="password"
-          label="Password"
+          label="Confirm Password"
           name="confirmPassword"
           userData={userData}
           setUserData={setUserData}
