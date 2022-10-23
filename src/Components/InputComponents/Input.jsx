@@ -26,7 +26,6 @@ function Input(props) {
             label={label}
             name={name}
             type={type}
-            variant="outlined"
             sx={textFieldStyle}
             value={userData[name]}
             onChange={handleFormChange}

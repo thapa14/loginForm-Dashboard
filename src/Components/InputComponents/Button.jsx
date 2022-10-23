@@ -7,7 +7,6 @@ function Button(props) {
     <MuiButton
       color="primary"
       variant={variant || "contained"}
-      fullWidth
       sx={{ margin: "1rem" }}
       {...other}
     >

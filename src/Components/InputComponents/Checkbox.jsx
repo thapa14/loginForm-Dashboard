@@ -14,11 +14,7 @@ function Checkbox(props) {
     <FormControl sx={{ alignSelf: "flex-start" }}>
       <FormControlLabel
         control={
-          <MuiCheckbox
-            name={name}
-            checked={userData.Checkbox}
-            onChange={setCheckbox}
-          />
+          <MuiCheckbox name={name} checked={userData} onChange={setCheckbox} />
         }
         label={label}
       />
