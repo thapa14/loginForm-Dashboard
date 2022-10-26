@@ -4,11 +4,11 @@ import useAuth from "./Authorization/useAuthHook";
 import RequireAuth from "./Authorization/RequireAuth";
 
 // pages import
-import Home from "./Pages/Home";
 import LoginPage from "./Pages/LoginPage";
 import Dashboard from "./Pages/Dashboard";
 import Registration from "./Pages/Registration";
 import ResetPassword from "./Pages/ResetPassword";
+import ForgotPasswordPage from "./Pages/ForgotPasswordPage";
 
 const LoggedUserContext = createContext();
 const SetLoggedUserContext = createContext();
@@ -26,9 +26,13 @@ function App() {
           <SetLoggedUserContext.Provider value={setLoggedUser}>
             <BrowserRouter>
               <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/login" element={<LoginPage />} />
+                {/* <Route path="/" element={<Home />} /> */}
+                <Route path="/" element={<LoginPage />} />
                 <Route path="/signup" element={<Registration />} />
+                <Route
+                  path="/forgetPassword"
+                  element={<ForgotPasswordPage />}
+                />
                 <Route
                   path="/dashboard"
                   element={

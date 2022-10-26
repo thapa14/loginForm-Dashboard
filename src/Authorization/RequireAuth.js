@@ -5,11 +5,7 @@ import { AuthContext } from "../App";
 function RequireAuth({ children }) {
   const authValue = useContext(AuthContext);
 
-  return authValue.authed === true ? (
-    children
-  ) : (
-    <Navigate to="/login" replace />
-  );
+  return authValue.authed === true ? children : <Navigate to="/" replace />;
 }
 
 export default RequireAuth;

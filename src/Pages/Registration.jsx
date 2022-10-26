@@ -57,7 +57,7 @@ function RegistrationPage({ message }) {
         userList.push(userDataToAdd);
         window.localStorage.setItem("userList", JSON.stringify(userList));
         setUserData(initialValue);
-        history("/login");
+        history("/");
       } else {
         setError((prev) => ({
           ...prev,
@@ -72,7 +72,7 @@ function RegistrationPage({ message }) {
       <AuthLayout
         title="Sign Up"
         navButton="Log In"
-        message="login"
+        message=""
         onSubmit={signUp}
       >
         <Input
@@ -128,7 +128,7 @@ function RegistrationPage({ message }) {
           setUserData={setUserData}
         />
         <Button type="submit">Sign Up</Button>
-        <AuthType message="login" messageType="Log In">
+        <AuthType message="" messageType="Log In">
           Already have an account!
         </AuthType>
       </AuthLayout>
