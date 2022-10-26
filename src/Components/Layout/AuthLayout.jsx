@@ -14,7 +14,7 @@ const Wrapper = styled(Div)`
   // align-items: center;
 `;
 const PaperDiv = styled(Div)`
-  height: calc(100vh - 64px);
+  min-height: calc(100vh - 64px);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -40,7 +40,7 @@ const CardHeading = styled.h1`
 
 //  inline styling
 const cardStyle = {
-  width: "25rem",
+  width: { xs: "18rem", sm: "25rem" },
   display: "flex",
   flexDirection: "column",
   alignItems: "center",

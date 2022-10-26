@@ -12,7 +12,7 @@ function Input(props) {
   };
 
   const textFieldStyle = {
-    width: "20rem",
+    width: { xs: "18rem", sm: "20rem" },
     margin: "8px auto",
   };
 
