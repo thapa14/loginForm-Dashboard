@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/loginForm-Dashboard/static/js/main.967fa39a.js",
-    "index.html": "/loginForm-Dashboard/index.html",
-    "main.967fa39a.js.map": "/loginForm-Dashboard/static/js/main.967fa39a.js.map"
+    "main.js": "/static/js/main.603a20c1.js",
+    "index.html": "/index.html",
+    "main.603a20c1.js.map": "/static/js/main.603a20c1.js.map"
   },
   "entrypoints": [
-    "static/js/main.967fa39a.js"
+    "static/js/main.603a20c1.js"
   ]
 }
